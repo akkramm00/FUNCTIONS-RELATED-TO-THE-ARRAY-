@@ -30,7 +30,22 @@ echo "<pre>";
 print_r(array_values($loisirs));
 echo "</pre>";
 
-echo "<br><br>";
+echo "<br>";
+
+// la fonction " array_key_exists()" permet de vérifier si une clè exixte dans une array :
+// revenant a l'array $voirues pour cet exercice:
+if(array_key_exists("Citroen",$voitures)){
+  echo "la clè  exixte";
+}else{
+  echo "la clè n'exixte pas";
+}
+echo "<br>";
+
+// La fonction " array_search()": deux arguùment spour fonctionner :
+// avec echo : elle renvoie le clè d'une valeur dans un tableau:
+echo array_search("DS3" , $voitures). "<br>";
+echo array_search("Guitare", $loisirs)."<br>";
+
 
 
 
