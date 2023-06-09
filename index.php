@@ -46,7 +46,39 @@ echo "<br>";
 echo array_search("DS3" , $voitures). "<br>";
 echo array_search("Guitare", $loisirs)."<br>";
 
+// La fonction " in_array() " renvoie ' echo message' si la valeur est trouvé ;
+//EXAMPLE+>
+ $prenoms = array("Pierre", "paul", "Jacques");
+if(in_array("Jacques", $prenoms)) {
+  echo "prénom trouvé";
+}else{
+  echo "prénom non trouvé";
+}
+echo "<br><br>";
+  // fonction " count()" ; renvoie le nombre d'élément d'un tableau :
+ $sports = array("natation", "velo", "course", "natation");
+ echo count($sports);
+// Fonctions " array_count_values" :
+print_r(array_count_values($sports)). "<br>";
 
+// comparer deux tableaux associatifs avec la fonction 
+// " array_diff_assoc" :
+echo "<br>";
+$compare =array(
+  "a" => "bleu",
+  "b" => "vert",
+  "c" => "jaune"
+  );
+$comparant = array(
+   "a" => "bleu",
+  "b" => "vert"
+);
+
+print_r(array_diff_assoc($compare, $comparant)). "<br><br>";
+echo "<br>";
+print_r(array_diff_key($compare, $comparant)). "<br>";//compare que les keys;
+echo "<br>";
+print_r(array_intersect($compare, $comparant)). "<br>";// compare les similitudes:
 
 
 
