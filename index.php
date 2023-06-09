@@ -78,19 +78,32 @@ print_r(array_diff_assoc($compare, $comparant)). "<br><br>";
 echo "<br>";
 print_r(array_diff_key($compare, $comparant)). "<br>";//compare que les keys;
 echo "<br>";
-print_r(array_intersect($compare, $comparant)). "<br>";// compare les similitudes:
+print_r(array_intersect($compare, $comparant)). "<br>";// compare les similitudes.
+echo"<br>";
+// les fonction squi pemettent de rajouter des elements au tableaux:
+// " array_fill(index, nbre de fois , "la valeur" )" romplir en anglais:
+
+print_r(array_fill(0, 5, "houss"));  echo"<br>";
+
+//Autre manière pour afficher le resultat :
+$remplissage = array_fill(0, 6, "php"); // assigner la fonction a une variable.
+print_r($remplissage); echo"<br>";
+
+$clefs = array("a", "b", "c", "d");
+$remplir= array_fill_keys($clefs, "bleu");
+
+print_r($remplir);
+echo"<br>";
+
+// array_push($tableau a completer, "valeur1", "valeur 2") => a la fin du tableau. ===> EMAPLE:
+$couleur = array("bleu", "blanc");
+array_push($couleur, "rouge", "jaune")."<br>";
 
 
-
-
-
-
-
-
-
-
-
-
+print_r($couleur);
+echo"<br>";
+array_pop($couleur); // permet de supprimer le dernier element du tableau .
+print_r($couleur);
 
 
 ?> 
