@@ -149,9 +149,20 @@ echo"<br>";
 // La fonction sort(): ordonner le tableau dans un ordre croissant(chiffres et lettres )
 sort($prenoms);
 echo"<br>";
+//============================================================================
+//=========== Les functions concernant les tableaux associatifs ==============
 
 
+//            ksort(ordre croissant selon les keys)
+//            krsort(ordre décroissant selon les keys)
+//            asort(ordre croissant selon les values)
+//            arsort(ordre décroissant selon les values)
 
+//                 créons un tableau associatif:
+
+$agenom = array("Pierre" => 25, "Paul" => 30, "Jacques" => 35);
+ksort($agenom);
+print_r($agenom);
 
 
 
