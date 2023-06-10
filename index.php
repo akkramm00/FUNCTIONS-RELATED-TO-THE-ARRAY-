@@ -104,6 +104,55 @@ print_r($couleur);
 echo"<br>";
 array_pop($couleur); // permet de supprimer le dernier element du tableau .
 print_r($couleur);
+echo"<br>";
+
+array_unshift($couleur, "jaune", "violet");//permet d'inserer des elemets au début du tableau;
+print_r($couleur);
+echo"<br>";
+array_shift($couleur); // permet de supprimer le premier elem du tableuax .
+echo"<br>";
+
+// la fonction " array_splice()":
+
+$couleur1 = array("a" => "bleue", "b" => "vert", "c" => "jaune");
+$couleur2 = array("a" => "rouge", "b" => "violet");
+
+print_r(array_splice($couleur1, 1));// permet se supprimer tous les elements a partir de l'indice [1], et retourner un nouveau tableau avec les elements supprimés
+echo"<br>";
+print_r($couleur1);
+echo"<br>";
+// array_merge();
+
+$alpha = array("a", "b");
+$beta = array("c", "d", "f", "g");
+
+$omega =array_merge($alpha, $beta);
+print_r($omega);
+echo"<br>";
+
+//array_combine():combine deux tableau si les deux ont la meme longueur :
+//le premier servira d'index pour lme deuxième: => EXAMPLE/
+
+$table1 = array("x", "y");
+$table2 = array("20", "30");
+
+$table3= array_combine($table1, $table2);
+print_r($table3);
+echo"<br>";
+
+// array_unique( permet de supprimer les doublons dans un tableau)=> EXAMPLE =>
+$prenoms = array("houssaine", "alain", "4", "george",10,  "houssaine", 4, "10");
+print_r(array_unique($prenoms));
+echo"<br>";
+// cette fonction est sensible a la casse pour les lettres ,mais insensible les les chiffres ("4" = 4 ; "10" = 10);
+
+// La fonction sort(): ordonner le tableau dans un ordre croissant(chiffres et lettres )
+sort($prenoms);
+echo"<br>";
+
+
+
+
 
 
 ?> 
